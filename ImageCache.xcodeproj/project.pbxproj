@@ -10,6 +10,13 @@
 		CA9634C122C3A09800E7320E /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9634B722C3A09800E7320E /* ImageCache.framework */; };
 		CA9634C622C3A09800E7320E /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634C522C3A09800E7320E /* ImageCacheTests.swift */; };
 		CA9634C822C3A09800E7320E /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CA9634BA22C3A09800E7320E /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA9634D822C3A0CB00E7320E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634D722C3A0CB00E7320E /* AppDelegate.swift */; };
+		CA9634DA22C3A0CB00E7320E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634D922C3A0CB00E7320E /* ViewController.swift */; };
+		CA9634DD22C3A0CB00E7320E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9634DB22C3A0CB00E7320E /* Main.storyboard */; };
+		CA9634DF22C3A0CC00E7320E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9634DE22C3A0CC00E7320E /* Assets.xcassets */; };
+		CA9634E222C3A0CC00E7320E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E022C3A0CC00E7320E /* LaunchScreen.storyboard */; };
+		CA9634E822C3A11B00E7320E /* cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634E722C3A11B00E7320E /* cache.swift */; };
+		CA9634EA22C3AA2800E7320E /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E922C3AA2800E7320E /* README.MD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,15 @@
 		CA9634C022C3A09800E7320E /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9634C522C3A09800E7320E /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
 		CA9634C722C3A09800E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9634D522C3A0CB00E7320E /* ImageCacheExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCacheExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA9634D722C3A0CB00E7320E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA9634D922C3A0CB00E7320E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA9634DC22C3A0CB00E7320E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA9634DE22C3A0CC00E7320E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA9634E122C3A0CC00E7320E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CA9634E322C3A0CC00E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA9634E722C3A11B00E7320E /* cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cache.swift; sourceTree = "<group>"; };
+		CA9634E922C3AA2800E7320E /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,14 +63,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA9634D222C3A0CB00E7320E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		CA9634AD22C3A09800E7320E = {
 			isa = PBXGroup;
 			children = (
+				CA9634E922C3AA2800E7320E /* README.MD */,
 				CA9634B922C3A09800E7320E /* ImageCache */,
 				CA9634C422C3A09800E7320E /* ImageCacheTests */,
+				CA9634D622C3A0CB00E7320E /* ImageCacheExample */,
 				CA9634B822C3A09800E7320E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -64,6 +89,7 @@
 			children = (
 				CA9634B722C3A09800E7320E /* ImageCache.framework */,
 				CA9634C022C3A09800E7320E /* ImageCacheTests.xctest */,
+				CA9634D522C3A0CB00E7320E /* ImageCacheExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +99,7 @@
 			children = (
 				CA9634BA22C3A09800E7320E /* ImageCache.h */,
 				CA9634BB22C3A09800E7320E /* Info.plist */,
+				CA9634E722C3A11B00E7320E /* cache.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -84,6 +111,19 @@
 				CA9634C722C3A09800E7320E /* Info.plist */,
 			);
 			path = ImageCacheTests;
+			sourceTree = "<group>";
+		};
+		CA9634D622C3A0CB00E7320E /* ImageCacheExample */ = {
+			isa = PBXGroup;
+			children = (
+				CA9634D722C3A0CB00E7320E /* AppDelegate.swift */,
+				CA9634D922C3A0CB00E7320E /* ViewController.swift */,
+				CA9634DB22C3A0CB00E7320E /* Main.storyboard */,
+				CA9634DE22C3A0CC00E7320E /* Assets.xcassets */,
+				CA9634E022C3A0CC00E7320E /* LaunchScreen.storyboard */,
+				CA9634E322C3A0CC00E7320E /* Info.plist */,
+			);
+			path = ImageCacheExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +176,23 @@
 			productReference = CA9634C022C3A09800E7320E /* ImageCacheTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CA9634D422C3A0CB00E7320E /* ImageCacheExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA9634E422C3A0CC00E7320E /* Build configuration list for PBXNativeTarget "ImageCacheExample" */;
+			buildPhases = (
+				CA9634D122C3A0CB00E7320E /* Sources */,
+				CA9634D222C3A0CB00E7320E /* Frameworks */,
+				CA9634D322C3A0CB00E7320E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageCacheExample;
+			productName = ImageCacheExample;
+			productReference = CA9634D522C3A0CB00E7320E /* ImageCacheExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -148,8 +205,12 @@
 				TargetAttributes = {
 					CA9634B622C3A09800E7320E = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					CA9634BF22C3A09800E7320E = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					CA9634D422C3A0CB00E7320E = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -160,6 +221,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CA9634AD22C3A09800E7320E;
 			productRefGroup = CA9634B822C3A09800E7320E /* Products */;
@@ -168,6 +230,7 @@
 			targets = (
 				CA9634B622C3A09800E7320E /* ImageCache */,
 				CA9634BF22C3A09800E7320E /* ImageCacheTests */,
+				CA9634D422C3A0CB00E7320E /* ImageCacheExample */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9634EA22C3AA2800E7320E /* README.MD in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +251,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA9634D322C3A0CB00E7320E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9634E222C3A0CC00E7320E /* LaunchScreen.storyboard in Resources */,
+				CA9634DF22C3A0CC00E7320E /* Assets.xcassets in Resources */,
+				CA9634DD22C3A0CB00E7320E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -194,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9634E822C3A11B00E7320E /* cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +277,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA9634C622C3A09800E7320E /* ImageCacheTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA9634D122C3A0CB00E7320E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA9634DA22C3A0CB00E7320E /* ViewController.swift in Sources */,
+				CA9634D822C3A0CB00E7320E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +298,25 @@
 			targetProxy = CA9634C222C3A09800E7320E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA9634DB22C3A0CB00E7320E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9634DC22C3A0CB00E7320E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CA9634E022C3A0CC00E7320E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA9634E122C3A0CC00E7320E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CA9634C922C3A09800E7320E /* Debug */ = {
@@ -341,6 +444,7 @@
 		CA9634CC22C3A09800E7320E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = am.ImageCache;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +471,7 @@
 		CA9634CD22C3A09800E7320E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +497,7 @@
 		CA9634CF22C3A09800E7320E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3TTG63T3Z;
 				INFOPLIST_FILE = ImageCacheTests/Info.plist;
@@ -409,6 +516,7 @@
 		CA9634D022C3A09800E7320E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3TTG63T3Z;
 				INFOPLIST_FILE = ImageCacheTests/Info.plist;
@@ -418,6 +526,42 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = am.ImageCacheTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CA9634E522C3A0CC00E7320E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3TTG63T3Z;
+				INFOPLIST_FILE = ImageCacheExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = am.ImageCacheExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA9634E622C3A0CC00E7320E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T3TTG63T3Z;
+				INFOPLIST_FILE = ImageCacheExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = am.ImageCacheExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,6 +594,15 @@
 			buildConfigurations = (
 				CA9634CF22C3A09800E7320E /* Debug */,
 				CA9634D022C3A09800E7320E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA9634E422C3A0CC00E7320E /* Build configuration list for PBXNativeTarget "ImageCacheExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA9634E522C3A0CC00E7320E /* Debug */,
+				CA9634E622C3A0CC00E7320E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
