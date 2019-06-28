@@ -11,12 +11,14 @@
 		CA9634C622C3A09800E7320E /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634C522C3A09800E7320E /* ImageCacheTests.swift */; };
 		CA9634C822C3A09800E7320E /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CA9634BA22C3A09800E7320E /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA9634D822C3A0CB00E7320E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634D722C3A0CB00E7320E /* AppDelegate.swift */; };
-		CA9634DA22C3A0CB00E7320E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634D922C3A0CB00E7320E /* ViewController.swift */; };
 		CA9634DD22C3A0CB00E7320E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9634DB22C3A0CB00E7320E /* Main.storyboard */; };
 		CA9634DF22C3A0CC00E7320E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9634DE22C3A0CC00E7320E /* Assets.xcassets */; };
 		CA9634E222C3A0CC00E7320E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E022C3A0CC00E7320E /* LaunchScreen.storyboard */; };
-		CA9634E822C3A11B00E7320E /* cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634E722C3A11B00E7320E /* cache.swift */; };
+		CA9634E822C3A11B00E7320E /* imageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634E722C3A11B00E7320E /* imageCache.swift */; };
 		CA9634EA22C3AA2800E7320E /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E922C3AA2800E7320E /* README.MD */; };
+		CA9634EC22C6A54600E7320E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634EB22C6A54600E7320E /* MainViewController.swift */; };
+		CA9634EF22C6AF1B00E7320E /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9634B722C3A09800E7320E /* ImageCache.framework */; };
+		CA9634F022C6AF1B00E7320E /* ImageCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA9634B722C3A09800E7320E /* ImageCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +29,28 @@
 			remoteGlobalIDString = CA9634B622C3A09800E7320E;
 			remoteInfo = ImageCache;
 		};
+		CA9634F122C6AF1B00E7320E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA9634AE22C3A09800E7320E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA9634B622C3A09800E7320E;
+			remoteInfo = ImageCache;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CA9634F322C6AF1C00E7320E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CA9634F022C6AF1B00E7320E /* ImageCache.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CA9634B722C3A09800E7320E /* ImageCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,13 +61,13 @@
 		CA9634C722C3A09800E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9634D522C3A0CB00E7320E /* ImageCacheExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCacheExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9634D722C3A0CB00E7320E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CA9634D922C3A0CB00E7320E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA9634DC22C3A0CB00E7320E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CA9634DE22C3A0CC00E7320E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA9634E122C3A0CC00E7320E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA9634E322C3A0CC00E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA9634E722C3A11B00E7320E /* cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cache.swift; sourceTree = "<group>"; };
+		CA9634E722C3A11B00E7320E /* imageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCache.swift; sourceTree = "<group>"; };
 		CA9634E922C3AA2800E7320E /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		CA9634EB22C6A54600E7320E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA9634EF22C6AF1B00E7320E /* ImageCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +105,7 @@
 				CA9634C422C3A09800E7320E /* ImageCacheTests */,
 				CA9634D622C3A0CB00E7320E /* ImageCacheExample */,
 				CA9634B822C3A09800E7320E /* Products */,
+				CA9634ED22C6AE9A00E7320E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +124,7 @@
 			children = (
 				CA9634BA22C3A09800E7320E /* ImageCache.h */,
 				CA9634BB22C3A09800E7320E /* Info.plist */,
-				CA9634E722C3A11B00E7320E /* cache.swift */,
+				CA9634E722C3A11B00E7320E /* imageCache.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -116,14 +141,21 @@
 		CA9634D622C3A0CB00E7320E /* ImageCacheExample */ = {
 			isa = PBXGroup;
 			children = (
+				CA9634EB22C6A54600E7320E /* MainViewController.swift */,
 				CA9634D722C3A0CB00E7320E /* AppDelegate.swift */,
-				CA9634D922C3A0CB00E7320E /* ViewController.swift */,
 				CA9634DB22C3A0CB00E7320E /* Main.storyboard */,
 				CA9634DE22C3A0CC00E7320E /* Assets.xcassets */,
 				CA9634E022C3A0CC00E7320E /* LaunchScreen.storyboard */,
 				CA9634E322C3A0CC00E7320E /* Info.plist */,
 			);
 			path = ImageCacheExample;
+			sourceTree = "<group>";
+		};
+		CA9634ED22C6AE9A00E7320E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,10 +215,12 @@
 				CA9634D122C3A0CB00E7320E /* Sources */,
 				CA9634D222C3A0CB00E7320E /* Frameworks */,
 				CA9634D322C3A0CB00E7320E /* Resources */,
+				CA9634F322C6AF1C00E7320E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CA9634F222C6AF1B00E7320E /* PBXTargetDependency */,
 			);
 			name = ImageCacheExample;
 			productName = ImageCacheExample;
@@ -268,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9634E822C3A11B00E7320E /* cache.swift in Sources */,
+				CA9634E822C3A11B00E7320E /* imageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9634DA22C3A0CB00E7320E /* ViewController.swift in Sources */,
+				CA9634EC22C6A54600E7320E /* MainViewController.swift in Sources */,
 				CA9634D822C3A0CB00E7320E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +330,11 @@
 			isa = PBXTargetDependency;
 			target = CA9634B622C3A09800E7320E /* ImageCache */;
 			targetProxy = CA9634C222C3A09800E7320E /* PBXContainerItemProxy */;
+		};
+		CA9634F222C6AF1B00E7320E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA9634B622C3A09800E7320E /* ImageCache */;
+			targetProxy = CA9634F122C6AF1B00E7320E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -535,6 +574,7 @@
 		CA9634E522C3A0CC00E7320E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3TTG63T3Z;
@@ -546,13 +586,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = am.ImageCacheExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CA9634E622C3A0CC00E7320E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T3TTG63T3Z;
@@ -564,7 +605,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = am.ImageCacheExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -10,21 +10,21 @@
 
 import UIKit
 
-/// Image Cache is an asynchronous cache that can load images in the background.
-/// It has a persistance layer that can persist images in memory for ImageCache.imageTimeToLive seconds.
-/// Memory warnings will clear the cache.
+/// Image Cache is an asynchronous image loader that can load images in the background, while keeping a cache of the most recently used.
+/// It has a persistance layer that keeps images in memory for ImageCache.imageTimeToLive seconds.
+/// Memory warnings will trigger all instances to call self.removeAll().
 /// - Note: This class is meant to be used as a singleton. But you can instanciate many ImageCaches for in-memory use as you want.
-class ImageCache {
+public class ImageCache {
 
     // MARK: - Internal State
 
     // concurrent queue used to protect the cache from concurrent writes.
-    private var queue: DispatchQueue
+    internal var queue: DispatchQueue
 
     // the state for every image to load
-    private var storage:[URL:ImageCacheEntry]
+    internal var storage:[URL:ImageCacheEntry]
 
-    // MARK: Tweaking variables
+    // MARK: - Public Tweaking variables
 
     /// Tweak this if you need to retain images more/less long in memory
     public var imageTimeToLive: TimeInterval = 10 * 60.0
@@ -32,10 +32,20 @@ class ImageCache {
     /// Tweak this to retain more or less images in the memory cache. Note that if max is reached, 10% of max space will be deleted.
     public var imageMaxCount: Int = 100
 
+    // MARK: - Init Code
 
-    init () {
+    /// Singleton to access a Default Shared cache instance accross your App. Note that you can create other instances of the cache if needed.
+    public static let shared = ImageCache()
+
+    /// Creates a dedicated ImageCache. Each instance will run opperations in a dedicated queue and clear all content upon the system emiting a MemoryWarningNotification
+    public init () {
         self.queue = DispatchQueue(label: "ImageCacheAccessQueue", qos: .default, attributes: [], autoreleaseFrequency: .inherit, target: nil)
         self.storage = [URL:ImageCacheEntry]()
+        NotificationCenter.default.addObserver(forName: UIApplication.didReceiveMemoryWarningNotification, object: nil, queue: nil) { [weak self] (_:Notification) in
+            self?.removeAll()
+        }
+        // Note(a.mougenot, 28-Jun-2019): Looks like the block itself will leak.
+        //                                It's not that bad because self itself is a weak reference, and this intended to be a Singleton.
     }
 
     // MARK: - API
@@ -72,11 +82,13 @@ class ImageCache {
             // C: here either we don't have a valid entry, let's create one.
             self.storage[url] = ImageCacheEntry(lastUsed: Date(), url: url, image: nil, loading: true, cancel: false, callback: callback)
             DispatchQueue.global().async {
-                if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
-                    self.imageArrived(url: url, image:image)
-                }
-
                 // Note(a.mougenot, 26-JUN-2019): We could improve this by using a background download task from the system instead of this.
+                // Note(a.mougenot, 28-JUN-2019): Using Data(contentsOf:) to load does not return an error and is not cancelable, maybe consider something more complex.
+                if let data = try? Data(contentsOf: url), let image = UIImage(data: data) {
+                    self.imageArrived(url: url, image: image)
+                } else {
+                    self.imageArrived(url: url, image: nil)
+                }
             }
         }
     }
@@ -99,6 +111,7 @@ class ImageCache {
     }
 
     /// Synchronous access to the image cache. This does not load the image but can be used if you need a synchonous access.
+    /// Calling this method extends the lifespan of the returned image in the cache.
     /// - parameter url: The URL used to load the image.
     /// - returns: The image if found, nil if the image is not already loaded.
     public func peek(url: URL) -> UIImage? {
@@ -114,6 +127,18 @@ class ImageCache {
         return result
     }
 
+    /// Synchronous access to the image cache. This will return true iff the loading of the image failed for any reason.
+    /// - parameter url: The URL used to load the image.
+    /// - returns: true iff an error occured while fetching the image, for any reason.
+    public func failed(url: URL) -> Bool {
+        var result:Bool = false
+        self.queue.sync {
+            guard let state = self.storage[url] else { return }
+            result = state.image == nil && !state.loading
+        }
+        return result
+    }
+
 
     /// synchronously frees the memory used by images in cache, ongoing downloads will be cancelled.
     public func removeAll() {
@@ -124,16 +149,14 @@ class ImageCache {
 
     // MARK: - Private
 
-    // TODO: memory warning
 
     // cleans cache to free some space
-    internal func cleanCache() {
+    internal func cacheRotation() {
 
     }
 
-
     // handles insersion of images into the cache and callback logic
-    internal func imageArrived(url:URL, image:UIImage) {
+    internal func imageArrived(url:URL, image:UIImage?) {
         self.queue.async {
             guard var state = self.storage[url] else {
                 return // can happen if you free the cache while downloading
