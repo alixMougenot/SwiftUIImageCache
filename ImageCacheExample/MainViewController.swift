@@ -19,12 +19,12 @@ class MainViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var tableview: UITableView!
 
     // MARK: - Table View Data Source
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard section == 0 else {
             return 0
         }
 
+        ImageCache.shared.imageMemoryMaxCount = 17
         return urls.count
     }
 
@@ -44,29 +44,31 @@ class MainViewController: UIViewController, UITableViewDataSource {
         cell.tag = tag // we use this to track that the view was not reused when we set the image.
 
         // Here is an illustration of where peek can be useful, you can instantly set the image if it is in cache, without having to deal with the async call.
-        if let alreadyLoadedImage = ImageCache.shared.peek(url: url) {
+        if let alreadyLoadedImage = ImageCache.shared.peek(url) {
             // image state
             print("Image Cache Example: image for index \(indexPath.row) found")
             cell.imageView?.image = alreadyLoadedImage
             cell.textLabel?.text = nil
 
-        } else if ImageCache.shared.failed(url: url) {
-            // error state
+        } else if ImageCache.shared.failedToFetch(url) {
+            // set view in error state
             cell.imageView?.image = nil
             cell.textLabel?.text = "Loading Image index \(indexPath.row) failed"
             cell.textLabel?.textColor = UIColor.red
 
         } else {
-            // loading state
+            // set view in loading state
             cell.imageView?.image = nil
             cell.textLabel?.text = "Loading Image index \(indexPath.row) ..."
             cell.textLabel?.textColor = UIColor.darkText
 
             print("Image Cache Example: launching image request for index \(indexPath.row)")
-            ImageCache.shared.fetch(url: url) { (currentURL:URL, image:UIImage?) in
-                print("Image Cache Example: asking tableview to update image for cell at index \(indexPath.row)")
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // Adding a timer so we can see the animation when they load.
-                    self.tableview.reloadRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
+            if !ImageCache.shared.fetching(url) { // we don't need to setup more than one callback.
+                ImageCache.shared.fetch(url) { (currentURL:URL, image:UIImage?) in
+                    print("Image Cache Example: asking tableview to update image for cell at index \(indexPath.row)")
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { // Adding a timer so we can see the animation when they load.
+                        self.tableview.reloadRows(at: [IndexPath(row: indexPath.row, section: 0)], with: .fade)
+                    }
                 }
             }
         }
@@ -75,6 +77,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
     }
 
 
+    // images are taken from instagram CDN, most of them will not load.
     let urls = [
          "https://scontent-cdg2-1.cdninstagram.com/vp/c193b40a87e5aae75779fa5778766c71/5D168480/t51.2885-15/sh0.08/e35/c0.90.720.720a/s640x640/62372400_428394194667401_1517352029248801660_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/8ca4f8a84759d7f1cc4215d2b7ac856a/5DA2CFEB/t51.2885-15/sh0.08/e35/s640x640/62530030_478809979552132_6901584951444626290_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
