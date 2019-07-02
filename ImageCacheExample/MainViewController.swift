@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
             return 0
         }
 
-        ImageCache.shared.imageMemoryMaxCount = 17
+        ImageCache.shared.imageMemoryMaxCount = 10
         return urls.count
     }
 
@@ -82,11 +82,9 @@ class MainViewController: UIViewController, UITableViewDataSource {
          "https://scontent-cdg2-1.cdninstagram.com/vp/c193b40a87e5aae75779fa5778766c71/5D168480/t51.2885-15/sh0.08/e35/c0.90.720.720a/s640x640/62372400_428394194667401_1517352029248801660_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/8ca4f8a84759d7f1cc4215d2b7ac856a/5DA2CFEB/t51.2885-15/sh0.08/e35/s640x640/62530030_478809979552132_6901584951444626290_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/f4dd8aedda355a50e5f35dd98b4c2ef7/5DA53DCF/t51.2885-15/sh0.08/e35/s640x640/64895377_454427395390016_7510140141915897035_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
-
         "https://scontent-cdg2-1.cdninstagram.com/vp/13c0d9a5c63cc6eaa412db84a1676cdb/5DA5E218/t51.2885-15/sh0.08/e35/s640x640/62258957_445143532931303_7819194460393565519_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/781b369a1817b9520d4a6e440dc9ace5/5D168492/t51.2885-15/e35/c0.80.640.640a/62561019_2357260431261401_6506410304292465089_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/09d9098599cab47adb9f7e0359c9768a/5D1601CF/t51.2885-15/e35/c0.80.640.640/65261728_595301677628717_7494976783626255443_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
-
         "https://scontent-cdg2-1.cdninstagram.com/vp/abd342580481265288bc94cfb71fd6ba/5D15B862/t51.2885-15/e35/c0.60.480.480a/64301780_2270976043166498_6793085958574096641_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/2548bff4b9058072559fdb9953c7390e/5DB770A9/t51.2885-15/sh0.08/e35/s640x640/62556239_2844771475592971_8875379001114394570_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/a1c316da21cd24a0131af3ef3e493fae/5D15A7D0/t51.2885-15/e35/c0.60.480.480a/64676592_402747373918731_5953163385582323624_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
@@ -102,7 +100,6 @@ class MainViewController: UIViewController, UITableViewDataSource {
         "https://scontent-cdg2-1.cdninstagram.com/vp/bb0d8ecc87be69697b44f5ee47e80800/5D167F9F/t51.2885-15/sh0.08/e35/s640x640/64588723_456771388431546_7458109120464930465_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/5a32bb61505766cd3b31f753c3a998d1/5D1688F8/t51.2885-15/sh0.08/e35/s640x640/64777110_194786844841373_3629655425332214136_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/673f6ac368b8671592aa87fa53888e13/5DBCE305/t51.2885-15/sh0.08/e35/s640x640/61716899_625590764607993_9221796566274393823_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
-         "https://scontent-cdg2-1.cdninstagram.com/vp/13c0d9a5c63cc6eaa412db84a1676cdb/5DA5E218/t51.2885-15/sh0.08/e35/s640x640/62258957_445143532931303_7819194460393565519_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
          "https://scontent-cdg2-1.cdninstagram.com/vp/cda41b5b9af99978d02f7f45f6c282c6/5DB6DD9E/t51.2885-15/sh0.08/e35/c135.0.810.810a/s640x640/19984976_1538931852833457_3600335234421227520_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/511c291e5bef8ac25efeb69dc139b1ce/5DBA76D1/t51.2885-15/sh0.08/e35/c0.135.1080.1080a/s640x640/50115211_297239940995118_8190868858006396245_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/9800ab42f5f4004d199f4032b419c6c5/5DAA6A13/t51.2885-15/sh0.08/e35/s640x640/20393703_681680132023980_9192137003158732800_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
@@ -112,7 +109,6 @@ class MainViewController: UIViewController, UITableViewDataSource {
         "https://scontent-cdg2-1.cdninstagram.com/vp/18a56292ea1ed08d35defc60fb6dabb5/5DACA902/t51.2885-15/sh0.08/e35/c0.120.960.960a/s640x640/33879377_195725164409773_3238417594725695488_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/eac89e3799d6bae99a5c08e869b7963e/5DA57317/t51.2885-15/sh0.08/e35/s640x640/23507596_1491664764284929_1578895772613607424_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/afd1fa1941e1e8b98ce7d1bd30f11695/5DB0331E/t51.2885-15/e35/61551869_302637107279123_3853409053750158495_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
-
         "https://scontent-cdg2-1.cdninstagram.com/vp/151bb9420deceffa5861d037bff7f714/5DA106F8/t51.2885-15/sh0.08/e35/p640x640/60675131_920252844983506_6173665836491965773_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com"
     ]
 }
