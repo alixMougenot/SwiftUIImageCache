@@ -8,7 +8,7 @@ It features:
 3. Controllable Disk persistance of the images, for faster fetch after a reboot or after an image is evicted from in-memory.
 4. The library will discard all in-memory images upon the Application firing a Memory Warning Notification, you don't have to handle that.
 
-This is a single file project: [ImageCache.swift](ImageCache/ImageCache.swift)
+This is a single file project: [ImageCache.swift](./ImageCache/ImageCache.swift)
 
 ## Usage
 
@@ -30,7 +30,7 @@ ImageCache.shared.fetch(imageURL) { (loadedURL:URL, image:UIImage?) in
 }
 ```
 
-If you want to handle a CollectionView or a TableView, We dont recommend async callbacks because cells are recycled. Here is how to use the synchronous cache access to deal with recycled views:
+If you want to handle a CollectionView or a TableView, we dont recommend async callbacks because cells are recycled. Here is how to use the synchronous cache access to deal with recycled views:
 
 ```Swift
 if let alreadyLoadedImage = ImageCache.shared.peek(imageUrl) {
@@ -55,12 +55,12 @@ if let alreadyLoadedImage = ImageCache.shared.peek(imageUrl) {
 ```
 The library will handle caching, evicting from cache, using disk-cache over network on its own. See next section on how to tweak this behavior.
 
-A more comprehensive example is inlcuded in the example App [MainViewController.swift](ImageCacheExample/MainViewController.swift). Note that the images used in the example project are extracted from Instagram traffic, some of the images may not be available from the CDN anymore.
+A more comprehensive example is inlcuded in the example App [MainViewController.swift](./ImageCacheExample/MainViewController.swift). Note that the images used in the example project are extracted from Instagram traffic, some of the images may not be available from the CDN anymore.
 
 ## Install
 
 #### Include the file
-You can simply copy [ImageCache.swift](ImageCache/ImageCache.swift) to your project. The library is contained in this file for easy include.
+You can simply copy [ImageCache.swift](./ImageCache/ImageCache.swift) to your project. The library is contained in this file for easy include.
 
 #### Include the module
 You can drag and drop the **ImageCache** target from the Project to your own. Don't forget to add the **ImageCache.framework** to *Included Binaries* so that it gets shipped with the App.
@@ -101,7 +101,7 @@ func applicationWillResignActive(_ application: UIApplication) {
 ```
 
 ## More?
-Please read the documentation of [ImageCache.swift](ImageCache/ImageCache.swift) for more features like cancelling fetch, deleting entries, etc.
+Please read the documentation of [ImageCache.swift](./ImageCache/ImageCache.swift) for more features like cancelling fetch, deleting entries, etc.
 
 ## Disclaimer
 This project is poorly tested. If you want to use this in Production, please comtribute to the test effort to make this library safer. Testing asynchronous code is unfortunately difficult.

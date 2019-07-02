@@ -14,7 +14,7 @@
 		CA9634DD22C3A0CB00E7320E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9634DB22C3A0CB00E7320E /* Main.storyboard */; };
 		CA9634DF22C3A0CC00E7320E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA9634DE22C3A0CC00E7320E /* Assets.xcassets */; };
 		CA9634E222C3A0CC00E7320E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E022C3A0CC00E7320E /* LaunchScreen.storyboard */; };
-		CA9634E822C3A11B00E7320E /* imageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634E722C3A11B00E7320E /* imageCache.swift */; };
+		CA9634E822C3A11B00E7320E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634E722C3A11B00E7320E /* ImageCache.swift */; };
 		CA9634EA22C3AA2800E7320E /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E922C3AA2800E7320E /* README.MD */; };
 		CA9634EC22C6A54600E7320E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634EB22C6A54600E7320E /* MainViewController.swift */; };
 		CA9634EF22C6AF1B00E7320E /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9634B722C3A09800E7320E /* ImageCache.framework */; };
@@ -65,7 +65,7 @@
 		CA9634DE22C3A0CC00E7320E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA9634E122C3A0CC00E7320E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA9634E322C3A0CC00E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CA9634E722C3A11B00E7320E /* imageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageCache.swift; sourceTree = "<group>"; };
+		CA9634E722C3A11B00E7320E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		CA9634E922C3AA2800E7320E /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
 		CA9634EB22C6A54600E7320E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,7 +124,7 @@
 			children = (
 				CA9634BA22C3A09800E7320E /* ImageCache.h */,
 				CA9634BB22C3A09800E7320E /* Info.plist */,
-				CA9634E722C3A11B00E7320E /* imageCache.swift */,
+				CA9634E722C3A11B00E7320E /* ImageCache.swift */,
 			);
 			path = ImageCache;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9634E822C3A11B00E7320E /* imageCache.swift in Sources */,
+				CA9634E822C3A11B00E7320E /* ImageCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
