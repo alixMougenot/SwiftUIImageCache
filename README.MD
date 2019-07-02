@@ -79,14 +79,14 @@ The cache mechanism can be controlled:
 
 ```Swift
 /// This variable dicates how long images are considered valid, for both in-memory and on-disk cache layers.
-    /// You can change the value if you need to fine control how long images are retained for this instance.
-    /// Note that this is per instance of the ImageCache. You can create short lived and long lived caches if you need to have different lifespans.
-    /// You cannot set this variable to a value smaller than 1.0
-    public var imageTimeToLive: TimeInterval = 10 * 60.0
+/// You can change the value if you need to fine control how long images are retained for this instance.
+/// Note that this is per instance of the ImageCache. You can create short lived and long lived caches if you need to have different lifespans.
+/// You cannot set this variable to a value smaller than 1.0
+public var imageTimeToLive: TimeInterval = 10 * 60.0
 
-    /// This variable dictates how many images are kept in memory. When max is reached, 10% of the max will be evicted form memory to go on-disk.
-    /// You cannot set this value smaller than 1.
-    public var imageMemoryMaxCount: Int = 100 
+/// This variable dictates how many images are kept in memory. When max is reached, 10% of the max will be evicted form memory to go on-disk.
+/// You cannot set this value smaller than 1.
+public var imageMemoryMaxCount: Int = 100 
 ```
 
 Note that you can create many ImageCache instances if you want to handle images with different lifespans.
@@ -97,7 +97,7 @@ The library will store to disk images when there is not enough room in memory. Y
 func applicationWillResignActive(_ application: UIApplication) {
         // saving current image cache
         ImageCache.shared.persistCacheToDisk()
-    }
+}
 ```
 
 ## More?
