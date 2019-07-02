@@ -63,11 +63,14 @@ A more comprehensive example is inlcuded in the example App [MainViewController.
 You can simply copy [ImageCache.swift](./ImageCache/ImageCache.swift) to your project. The library is contained in this file for easy include.
 
 #### Include the module
-You can drag and drop the **ImageCache** target from the Project to your own. Don't forget to add the **ImageCache.framework** to *Included Binaries* so that it gets shipped with the App.
+You can drag and drop the **ImageCache** folder and target from the Project to your own. Don't forget to add the **ImageCache.framework** to *Included Binaries* so that it gets shipped with the App.
 If your code is in OBJ-C don't forget to set *EMBEDDED_CONTENT_CONTAINS_SWIFT* to *YES* in your App target.
 
-#### Cartage & CocoaPods ?
-TODO
+#### CocoaPods
+
+```Ruby
+pod 'ImageCache', :git => 'https://github.com/alixMougenot/SwiftUIImageCache.git'
+```
 
 
 ## Cache Control
