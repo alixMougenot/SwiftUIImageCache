@@ -55,7 +55,7 @@ if let alreadyLoadedImage = ImageCache.shared.peek(imageUrl) {
 ```
 The library will handle caching, evicting from cache, using disk-cache over network on its own. See next section on how to tweak this behavior.
 
-A more comprehensive example is inlcuded in the example App [MainViewController.swift](./ImageCacheExample/MainViewController.swift). Note that the images used in the example project are extracted from Instagram traffic, some of the images may not be available from the CDN anymore.
+A more comprehensive example is inlcuded in the example App [MainViewController.swift](./ExampleApp/ImageCacheExampleApp/MainViewController.swift). Note that the images used in the example project are extracted from Instagram traffic, some of the images may not be available from the CDN anymore.
 
 ## Install
 
