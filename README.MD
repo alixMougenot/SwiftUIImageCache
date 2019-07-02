@@ -57,14 +57,7 @@ The library will handle caching, evicting from cache, using disk-cache over netw
 
 A more comprehensive example is inlcuded in the example App [MainViewController.swift](./ExampleApp/ImageCacheExampleApp/MainViewController.swift). Note that the images used in the example project are extracted from Instagram traffic, some of the images may not be available from the CDN anymore.
 
-## Install
-
-#### Include the file
-You can simply copy [ImageCache.swift](./ImageCache/ImageCache.swift) to your project. The library is contained in this file for easy include.
-
-#### Include the module
-You can drag and drop the **ImageCache** folder and target from the Project to your own. Don't forget to add the **ImageCache.framework** to *Included Binaries* so that it gets shipped with the App.
-If your code is in OBJ-C don't forget to set *EMBEDDED_CONTENT_CONTAINS_SWIFT* to *YES* in your App target.
+## Install the Library
 
 #### CocoaPods
 
@@ -72,6 +65,18 @@ If your code is in OBJ-C don't forget to set *EMBEDDED_CONTENT_CONTAINS_SWIFT* t
 pod 'ImageCache', :git => 'https://github.com/alixMougenot/SwiftUIImageCache.git'
 ```
 
+#### Include the file
+You can simply copy [ImageCache.swift](./ImageCache/ImageCache.swift) to your project. The library is contained in this file for easy include.
+
+You can try to drag and drop the **ImageCache** folder and target from the Project to your own to create a new private module (or simply create a new module and copy the source file to it). Don't forget to add the **ImageCache.framework** to *Included Binaries* so that it gets shipped with the App. If your code is in OBJ-C don't forget to set *EMBEDDED_CONTENT_CONTAINS_SWIFT* to *YES* in your App target.
+
+### Run the Example App from XCode
+The test App is using CocoaPods for dependency management:
+```Bash
+cd ExampleApp/
+pod install
+open ImageCacheExampleApp.xcworkspace
+```
 
 ## Cache Control
 The cache mechanism can be controlled:
