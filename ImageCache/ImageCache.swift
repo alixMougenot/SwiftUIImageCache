@@ -321,6 +321,8 @@ public class ImageCache {
         let retainSize = Int(Double(self.imageMemoryMaxCount) * 0.1) + 1
         for (key, _) in sortedEntries.prefix(retainSize) {
             guard let removedEntry = self.storage.removeValue(forKey: key) else { continue }
+
+            removedEntry.callback?(removedEntry.url, nil) // if still downloading, we want to tell that it failed.
             self.persistToDisk(removedEntry)
         }
 

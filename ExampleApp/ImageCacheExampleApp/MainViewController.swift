@@ -23,7 +23,7 @@ class MainViewController: UIViewController, UITableViewDataSource {
             return 0
         }
 
-        ImageCache.shared.imageMemoryMaxCount = 10
+        ImageCache.shared.imageMemoryMaxCount = 20
         return urls.count
     }
 
@@ -108,7 +108,30 @@ class MainViewController: UIViewController, UITableViewDataSource {
         "https://scontent-cdg2-1.cdninstagram.com/vp/18a56292ea1ed08d35defc60fb6dabb5/5DACA902/t51.2885-15/sh0.08/e35/c0.120.960.960a/s640x640/33879377_195725164409773_3238417594725695488_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/eac89e3799d6bae99a5c08e869b7963e/5DA57317/t51.2885-15/sh0.08/e35/s640x640/23507596_1491664764284929_1578895772613607424_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
         "https://scontent-cdg2-1.cdninstagram.com/vp/afd1fa1941e1e8b98ce7d1bd30f11695/5DB0331E/t51.2885-15/e35/61551869_302637107279123_3853409053750158495_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
-        "https://scontent-cdg2-1.cdninstagram.com/vp/151bb9420deceffa5861d037bff7f714/5DA106F8/t51.2885-15/sh0.08/e35/p640x640/60675131_920252844983506_6173665836491965773_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com"
+        "https://scontent-cdg2-1.cdninstagram.com/vp/151bb9420deceffa5861d037bff7f714/5DA106F8/t51.2885-15/sh0.08/e35/p640x640/60675131_920252844983506_6173665836491965773_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com",
+
+            "https://picsum.photos/id/70/400/400",
+            "https://picsum.photos/id/71/400/400",
+            "https://picsum.photos/id/72/400/400",
+            "https://picsum.photos/id/73/400/400",
+            "https://picsum.photos/id/74/400/400",
+            "https://picsum.photos/id/75/400/400",
+            "https://picsum.photos/id/76/400/400",
+            "https://picsum.photos/id/77/400/400",
+            "https://picsum.photos/id/78/400/400",
+            "https://picsum.photos/id/79/400/400",
+
+            "https://picsum.photos/id/80/400/400",
+            "https://picsum.photos/id/81/400/400",
+            "https://picsum.photos/id/82/400/400",
+            "https://picsum.photos/id/83/400/400",
+            "https://picsum.photos/id/84/400/400",
+            "https://picsum.photos/id/85/400/400",
+            "https://picsum.photos/id/86/400/400",
+            "https://picsum.photos/id/87/400/400",
+            "https://picsum.photos/id/88/400/400",
+            "https://picsum.photos/id/89/400/400",
+
     ]
 }
 

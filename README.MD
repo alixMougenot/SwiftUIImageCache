@@ -112,7 +112,8 @@ func applicationWillResignActive(_ application: UIApplication) {
 Please read the documentation of [ImageCache.swift](./ImageCache/ImageCache.swift) for more features like cancelling fetch, deleting entries, etc.
 
 ## Disclaimer
-This project is poorly tested. If you want to use this in Production, please comtribute to the test effort to make this library safer. Testing asynchronous code is unfortunately difficult.
+This project is poorly tested. If you want to use this in Production, please comtribute to the test effort to make this library safer.
+There are a few XCTest available in the ImageCache project, they already test async behaviour for the cache rotation, but that is not enough tests.
 
 ## Contribute
 There are a few notes in the code where improvements are needed, don't hesitate to send merge requests for these or add new ones in the code.

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA9634C122C3A09800E7320E /* ImageCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA9634B722C3A09800E7320E /* ImageCache.framework */; };
-		CA9634C622C3A09800E7320E /* ImageCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634C522C3A09800E7320E /* ImageCacheTests.swift */; };
+		CA9634C622C3A09800E7320E /* ImageCacheRotationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634C522C3A09800E7320E /* ImageCacheRotationTests.swift */; };
 		CA9634C822C3A09800E7320E /* ImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CA9634BA22C3A09800E7320E /* ImageCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA9634E822C3A11B00E7320E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9634E722C3A11B00E7320E /* ImageCache.swift */; };
 		CA9634EA22C3AA2800E7320E /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = CA9634E922C3AA2800E7320E /* README.MD */; };
@@ -31,7 +31,7 @@
 		CA9634BA22C3A09800E7320E /* ImageCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCache.h; sourceTree = "<group>"; };
 		CA9634BB22C3A09800E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9634C022C3A09800E7320E /* ImageCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA9634C522C3A09800E7320E /* ImageCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheTests.swift; sourceTree = "<group>"; };
+		CA9634C522C3A09800E7320E /* ImageCacheRotationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheRotationTests.swift; sourceTree = "<group>"; };
 		CA9634C722C3A09800E7320E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9634E722C3A11B00E7320E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		CA9634E922C3AA2800E7320E /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		CA9634C422C3A09800E7320E /* ImageCacheTests */ = {
 			isa = PBXGroup;
 			children = (
-				CA9634C522C3A09800E7320E /* ImageCacheTests.swift */,
+				CA9634C522C3A09800E7320E /* ImageCacheRotationTests.swift */,
 				CA9634C722C3A09800E7320E /* Info.plist */,
 			);
 			path = ImageCacheTests;
@@ -227,7 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA9634C622C3A09800E7320E /* ImageCacheTests.swift in Sources */,
+				CA9634C622C3A09800E7320E /* ImageCacheRotationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
